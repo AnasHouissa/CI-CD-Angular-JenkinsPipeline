@@ -6,8 +6,7 @@ pipeline {
             stage('Build Frontend'){
                     steps {
                         git 'https://github.com/AnasHouissa/DevopsProjectFrontend.git'
-                        sh 'npm install'
-                        sh 'npm build'
+                        sh 'npm run build'
                     }
             }
     }
