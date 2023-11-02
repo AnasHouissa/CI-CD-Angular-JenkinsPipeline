@@ -1,7 +1,15 @@
 FROM node:latest as build
-WORKDIR /app
-COPY package.json /app/package.json
+
+WORKDIR /usr/local/app
+
+COPY ./ /usr/local/app/
+
 RUN npm install
-COPY . /app
+
+RUN npm run build
+
+FROM nginx:latest
+
+COPY --from=build /usr/local/app/dist/summer-workshop-angular /usr/share/nginx/html
+
 EXPOSE 4200
-CMD ng serve 
