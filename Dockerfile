@@ -12,4 +12,4 @@ FROM nginx:latest
 
 COPY --from=build /usr/local/app/dist/summer-workshop-angular /usr/share/nginx/html
 
-EXPOSE 4200
+EXPOSE 80
