@@ -13,6 +13,4 @@ FROM nginx:latest
 
 COPY --from=build /usr/local/app/dist/summer-workshop-angular /usr/share/nginx/html
 
-EXPOSE 80
-
-CMD ["npm", "start"]
+EXPOSE 8000
