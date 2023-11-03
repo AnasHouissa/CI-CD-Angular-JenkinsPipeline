@@ -8,7 +8,7 @@ RUN npm install
 
 RUN npm run build
 
-FROM nginx:latest
+FROM nginx:alpine
 
 COPY --from=build /usr/local/app/dist/summer-workshop-angular /usr/share/nginx/html
 
