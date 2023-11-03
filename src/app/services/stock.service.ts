@@ -6,7 +6,7 @@ import {Observable} from 'rxjs';
   providedIn: 'root'
 })
 export class StockService {
-  private apiUrl = 'http://172.26.0.2:8082/stock';
+  private apiUrl = 'http://springbootapp:8082/stock';
 
   constructor(private http: HttpClient) {
   }
