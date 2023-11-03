@@ -7,7 +7,7 @@ pipeline {
     
     stage('Build Frontend') {
       steps {
-        sh 'npm ci' 
+        sh 'npm clean-install' 
         sh 'npm run build --prod'
       }
     }
