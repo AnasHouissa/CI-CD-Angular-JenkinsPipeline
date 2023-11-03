@@ -7,7 +7,8 @@ pipeline {
     
     stage('Build Frontend') {
       steps {
-        sh 'npm clean-install' 
+        sh 'rm -rf node_modules/'
+        sh 'npm install' 
         sh 'npm run build --prod'
       }
     }
