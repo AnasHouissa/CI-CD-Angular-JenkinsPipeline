@@ -43,14 +43,14 @@ pipeline {
         }
         success {            
             mail to :'anashouissa@gmail.com',
-            subject : 'Successful Jenkins Build',
-            body : 'Great news! The Jenkins build is a success.',
+            subject : 'Successful Jenkins Build Of The Frontend',
+            body : 'Great news! The Jenkins build of the angular frontend is a success.',
             from : 'fastyappesprit@gmail.com'
         }
         failure {
             mail to :'anashouissa@gmail.com',
-            subject : 'Jenkins Build Failed',
-            body : 'Unfortunately, the Jenkins build has encountered an issue and failed.',
+            subject : 'Jenkins Build Of The Frontend Failed',
+            body : 'Unfortunately, the Jenkins build of the angular frontend has encountered an issue and failed.',
             from : 'fastyappesprit@gmail.com'
         }
     }
