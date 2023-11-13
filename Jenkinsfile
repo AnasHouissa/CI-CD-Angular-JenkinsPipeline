@@ -16,7 +16,6 @@ pipeline {
     stage("Docker build Frontend"){
        steps {
         sh 'docker build -t devops_front_end .'
-        sh 'docker image list'
         sh 'docker tag devops_front_end houissa1998/devops_front_end:latest'
         
         withCredentials([string(credentialsId: 'DockerhubCred', variable: 'PASSWORD')]) {
